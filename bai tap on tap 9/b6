@@ -1,0 +1,21 @@
+class Product:
+    def __init__(self, price):
+        self.price = price   # gọi setter
+
+    @property
+    def price(self):
+        return self._price
+
+    @price.setter
+    def price(self, value):
+        if value > 0:
+            self._price = value
+        else:
+            print("Price must be > 0")
+
+    def __str__(self):
+        return f"Product price: {self.price}"
+
+
+p = Product(float(input("nhap gia san pham: ")))
+print(p)

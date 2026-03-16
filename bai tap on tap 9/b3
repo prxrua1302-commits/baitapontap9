@@ -1,0 +1,12 @@
+name = input("Nhập tên: ")
+
+name = name.strip()      
+name = name.lower()     
+name = name.split()    
+
+result = ""
+
+for word in name:
+    result += word.capitalize() + " "
+
+print("Tên chuẩn hóa:", result.strip())
